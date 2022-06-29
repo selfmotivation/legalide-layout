@@ -52,13 +52,12 @@ li { list-style: none; }
 
 .hero__bg-photo { margin-right: -27px; }
 
+.our-practice { padding-top: 100px; padding-bottom: 100px; }
 .our-practice .content { text-align: center; }
 
-.our-practice__title { margin-top: 100px; margin-bottom: 15px; font-size: 40px; }
+.our-practice__title { margin-top: 0; margin-bottom: 15px; font-size: 40px; }
 
 .our-practice__subtitle { margin-bottom: 80px; font-size: 14px; line-height: 20px; letter-spacing: 0.2px; }
-
-.our-practice__blocks { margin-bottom: 100px; }
 
 .our-practice__blocks-list { display: flex; justify-content: space-between; }
 
@@ -72,3 +71,16 @@ li { list-style: none; }
 .our-practice__blocks-list__item:nth-child(2):hover img { display: inline; }
 .our-practice__blocks-list__item:nth-child(2):hover img + img { display: none; }
 .our-practice__blocks-list__item:nth-child(odd):hover { background-color: #295C7A; color: #FFFFFF; }
+
+.practice-advice { background-color: #FAFAFA; padding-top: 125px; padding-bottom: 108px; }
+.practice-advice .content { text-align: center; }
+
+.practice-advice__title { margin-bottom: 15px; font-size: 40px; }
+
+.practice-advice__subtitle { margin-bottom: 45px; font-size: 14px; line-height: 20px; letter-spacing: 0.2px; }
+
+.practice-advice__blocks-list { display: flex; justify-content: space-between; }
+
+.practice-advice__blocks-list__item { display: flex; justify-content: space-between; align-items: flex-start; flex-direction: column; max-width: 230px; box-sizing: border-box; text-align: left; background-color: #FFF; }
+.practice-advice__blocks-list__item__title { margin: 0; padding: 30px 40px 0 30px; font: 700 16px / 24px "Martel"; color: #252B42; }
+.practice-advice__blocks-list__item__text { margin-bottom: 30px; padding: 0 40px 0 30px; font: 400 14px / 20px "Open Sans"; color: #737373; }
