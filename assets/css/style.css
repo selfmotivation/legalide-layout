@@ -84,3 +84,24 @@ li { list-style: none; }
 .practice-advice__blocks-list__item { display: flex; justify-content: space-between; align-items: flex-start; flex-direction: column; max-width: 230px; box-sizing: border-box; text-align: left; background-color: #FFF; }
 .practice-advice__blocks-list__item__title { margin: 0; padding: 30px 40px 0 30px; font: 700 16px / 24px "Martel"; color: #252B42; }
 .practice-advice__blocks-list__item__text { margin-bottom: 30px; padding: 0 40px 0 30px; font: 400 14px / 20px "Open Sans"; color: #737373; }
+
+.who-we-are { padding-top: 100px; padding-bottom: 108px; }
+.who-we-are .content { text-align: center; }
+
+.who-we-are__title { margin-top: 0; margin-bottom: 15px; font-size: 40px; }
+
+.who-we-are__subtitle { margin-bottom: 100px; font-size: 14px; line-height: 20px; letter-spacing: 0.2px; }
+
+.who-we-are__block { display: flex; justify-content: space-between; align-items: flex-end; }
+
+.who-we-are__video { display: inline-block; position: relative; }
+.who-we-are__video-btn { position: absolute; left: calc(50% - 45px); top: calc(50% - 45px); }
+
+.who-we-are__text-block { display: inline-block; width: 333px; margin-bottom: 10px; text-align: left; }
+.who-we-are__text-block__title { margin: 0; font-size: 40px; }
+.who-we-are__text-block__subtitle { margin-bottom: 50px; font-size: 14px; line-height: 20px; }
+
+.advantages-list__item { display: flex; flex-direction: column; flex-wrap: wrap; margin-top: 30px; height: 77px; }
+.advantages-list__item img { display: inline-block; width: 32px; }
+.advantages-list__item__title { margin: 0; display: inline-block; max-width: 270px; margin-bottom: 10px; font-size: 16px; line-height: 24px; }
+.advantages-list__item__subtitle { margin: 0; font-size: 14px; font-weight: 700; }
