@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@700;900&family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600;700&display=swap');
+
+$primary-color: #D0A144;
+$text-color: #252B42;
+$second-text-color: #737373;
+$light-text-color: #FFFFFF;
+$secondary-color-2: #784F33;
+$dark-background-color: #252B42;
+
+$background-gradient: linear-gradient(270deg, #295C7A -1.04%, #0072B5 100%);
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  padding: 9px 36px;
+
+  font: 700 14px / 28px "Open Sans";
+
+  border: none;
+  border-radius: 37px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn_hover-blink {
+  overflow: hidden;
+  position: relative;
+  
+  &:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+  }
+}
+
+.btn_hover-blink:hover {
+  
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+.wrapper {
+  width: 1048px;
+  
+  margin: 0 auto;
+}
+
+.title {
+  color: $text-color;
+  font-family: "Martel";
+}
+
+.subtitle {
+  color: $second-text-color;
+  font-family: "Open Sans";
+}
+
+// Header
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 60px;
+
+  & .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 104px;
+  }
+}
+
+.logo {
+  flex-grow: 13;
+  margin-left: 10px;
+
+  color: $text-color;
+  font: 700 24px/32px "Martel";
+  letter-spacing: 0.1px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  margin-right: -6px;
+}
+
+.navbar__list {
+  display: flex;
+
+  margin-right: 16px;
+
+  list-style: none;
+
+  &-item {
+    margin-right: 26px;
+
+    color: $second-text-color;
+    font: 600 14px / 24px "Open Sans";
+    letter-spacing: 0.2px;
+  }
+}
+
+.search, .cart {
+  display: block;
+  height: 16px;
+
+  margin-right: 22px;
+
+  & img {
+    width: 16px;
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  width: 23px;
+  height: 14px;
+}
+
+.burger-line {
+  width: 75%;
+  height: 2px;
+  background-color: $second-text-color;
+
+  &:first-of-type {
+    width: 100%;
+  }
+
+  &:last-of-type {
+    width: 50%;
+  }
+}
+
+// Hero block section
+
+.hero-block {
+  display: flex;
+  align-items: flex-end;
+  
+  height: 100vh;
+  max-height: 900px;
+
+  margin-top: -104px;
+
+  background: url('../img/bg.png') center / cover no-repeat;
+
+  & .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hero-block__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  font-size: 58px;
+  line-height: 65px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.hero-block__subtitle {
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.hero-block__get-quote-btn {
+  margin-right: 5px;
+
+  color: $light-text-color;
+  background-color: #784F33;
+  border: 1px solid #784F33;
+
+  transition: .2s;
+
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.hero-block__learn-more-btn {
+  color: $secondary-color-2;
+  border: 1px solid #784F33;
+  background-color: transparent;
+
+  transition: .4s;
+
+  &:hover {
+    color: $light-text-color;
+    background-color: #784F33;
+  }
+}
+
+.hero__bg-photo {
+  margin-right: -27px;
+  max-height: 85vh;
+}
+
+// Our Practice section
+
+.our-practice {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  & .content {
+    text-align: center;
+  }
+}
+
+.our-practice__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.our-practice__subtitle {
+  margin-bottom: 80px;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.our-practice__blocks-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-practice__blocks-list__item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  padding: 30px 5px;
+
+  border-radius: 5px;
+  background-color: #F9F9F9;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+
+  transition: .3s;
+  cursor: pointer;
+
+  & img {
+    margin-bottom: 14px;
+  }
+
+  & img + img {
+    display: none;
+  }
+
+  &:hover img {
+    display: none;
+  }
+
+  &:hover img + img {
+    display: inline;
+  }
+
+  & span {
+    display: block;
+
+    font-family: "Martel";
+  }
+
+  &:nth-child(2) {
+    background-color: #295C7A;
+    color: $light-text-color;
+  }
+
+  &:nth-child(2):hover img {
+    display: inline;
+  }
+
+  &:nth-child(2):hover img + img {
+    display: none;
+  }
+
+  &:nth-child(odd) {
+    &:hover {
+      background-color: #295C7A;
+      color: $light-text-color;
+    }
+  }
+}
+
+// Practice advice section
+
+.practice-advice {
+  background-color: #FAFAFA;
+  padding-top: 125px;
+  padding-bottom: 108px;
+
+  & .content {
+    text-align: center;
+  }
+}
+
+.practice-advice__title {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.practice-advice__subtitle {
+  margin-bottom: 45px;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.practice-advice__blocks-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.practice-advice__blocks-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+
+  max-width: 230px;
+
+  box-sizing: border-box;
+
+  text-align: left;
+
+  background-color: #FFF;
+
+  &__title {
+    margin: 0;
+    padding: 30px 40px 0 30px;
+    font: 700 16px / 24px "Martel";
+    color: $text-color;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    padding: 0 40px 0 30px;
+    font: 400 14px / 20px "Open Sans";
+    color: $second-text-color;
+  }
+}
+
+// Who we are section
+
+.who-we-are {
+  padding-top: 100px;
+  padding-bottom: 138px;
+
+  & .content {
+    text-align: center;
+  }
+}
+
+.who-we-are__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.who-we-are__subtitle {
+  margin-bottom: 100px;
+
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.who-we-are__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.who-we-are__video {
+  display: inline-block;
+  position: relative;
+
+  &-btn {
+    position: absolute;
+    left: calc(50% - 45px);
+    top: calc(50% - 45px);
+  }
+}
+
+.who-we-are__text-block {
+  display: inline-block;
+  width: 333px;
+
+  margin-bottom: 10px;
+
+  text-align: left;
+
+  &__title {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.advantages-list {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+    height: 77px;
+
+    & img {
+      display: inline-block;
+      width: 32px;
+    }
+
+    &__title {
+      margin: 0;
+      display: inline-block;
+      max-width: 270px;
+      margin-bottom: 10px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__subtitle {
+      margin: 0;
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
+
+// Our clients section
+
+.our-clients {
+  background-color: #FAFAFA;
+
+  .content {
+    padding-top: 50px;
+    padding-bottom: 8px;
+  }
+}
+
+.our-clients__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+}
+
+// Subscribe block
+
+.subscribe-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  top: 57px;
+
+  padding: 30px 50px;
+  margin: 0 30px;
+
+  background: $background-gradient;
+  border-radius: 2px;
+
+  .subscribe-text {
+    display: inline-block;
+    margin: 0;
+
+    width: 270px;
+
+    font: 700 24px / 32px "Martel";
+    letter-spacing: 0.1px;
+    color: $light-text-color;
+  }
+
+  .subscribe-input {
+    display: flex;
+
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    background-color: #F9F9F9;
+
+    &__email {
+      padding: 14px 0 14px 20px;
+
+      width: 312px;
+
+      font: 14px / 28px "Montserrat";
+      letter-spacing: 0.2px;
+
+      border: none;
+      background-color: #F9F9F9;
+    }
+
+    &__button {
+      padding: 14px 22px;
+
+      font: 14px / 28px "Montserrat";
+      letter-spacing: 0.2px;
+
+      color: $light-text-color;
+      border: none;
+      border-radius: 0px 5px 5px 0px;
+      background-color: $primary-color;
+
+      &:hover {
+        background-color: $primary-color
+      }
+    }
+  }
+}
+
+.divider-dark {
+  width: 100%;
+  height: 77px;
+
+  background-color: $dark-background-color;
+}
+
+// Get in touch block
+
+.get-in-touch {
+  padding-top: 80px;
+  padding-bottom: 155px;
+
+  background-color: #F3F3F3;
+
+  &__title {
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 80px;
+
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+
+  &__blocks-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 34px;
+    margin-left: 34px;
+    
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      padding: 50px 59px;
+
+      background-color: $light-text-color;
+      color: $text-color;
+
+      &__img {
+        margin-bottom: 15px;
+      }
+
+      &__text {
+        margin: 0;
+        font: 700 14px / 24px "Open Sans";
+      }
+
+      &__subtitle {
+        font: 700 16px / 24px "Martel";
+      }
+
+      &__submit-btn {
+        padding: 7px 20px;
+    
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        background-color: #fff;
+        color: $primary-color;
+
+        transition: .2s;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $light-text-color;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        background-color: $dark-background-color;
+        color: $light-text-color;
+      }
+      
+      &:nth-child(2) &__submit-btn {
+        background-color: $dark-background-color;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $light-text-color;
+        }
+      }
+    }
+  }
+}
+
+// Free consultation section
+
+.free-consultation {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-color: #FAFAFA;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 62px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font: 700 24px / 32px "Martel";
+    color: $text-color;
+  }
+
+  &__subtitle {
+    margin: 0;
+
+    font: 400 14px / 20px "Open Sans";
+    letter-spacing: 0.2px;
+    color: $second-text-color;
+  }
+
+  &__btn {
+    max-width: 160px;
+
+    padding: 15px 40px;
+    margin-right: 145px;
+
+    border-radius: 5px;
+    background-color: $secondary-color-2;
+    color: $light-text-color;
+
+    transition: .2s;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+// Footer
+
+.footer {
+  background: $background-gradient;
+
+  .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    
+  }
+
+  &__list-blocks {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      font: 700 16px / 24px "Martel";
+      letter-spacing: 0.1px;
+      color: $light-text-color;
+    }
+
+    &__item {
+      margin-right: 60px;
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-item {
+          margin-bottom: 10px;
+
+          display: flex;
+
+          img {
+            margin-right: 10px;
+          }
+
+          a {
+            font: 600 14px / 24px "Open Sans";
+            letter-spacing: 0.2px;
+            color: $light-text-color;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__credits {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    background-color: $light-text-color;
+
+    &__text {
+      font: 700 14px / 24px "Open Sans";
+      letter-spacing: 0.2px;
+      color: $second-text-color;
+    }
+
+    .socials-list {
+      display: flex;
+      align-items: center;
+
+      &__item {
+        margin-right: 20px;
+      }
+    }
+  }
+}
