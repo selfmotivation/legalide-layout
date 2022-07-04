@@ -44,8 +44,8 @@ li { list-style: none; }
 
 .hero-block__subtitle { margin-top: 0; margin-bottom: 35px; font-family: "Montserrat"; font-size: 20px; line-height: 30px; font-weight: 500; letter-spacing: 0.2px; }
 
-.hero-block__get-quote-btn { margin-right: 5px; color: #FFFFFF; background-color: #784F33; border: 1px solid #784F33; transition: .6s; }
-.hero-block__get-quote-btn:hover { color: #784F33; background-color: #D0A144; }
+.hero-block__get-quote-btn { margin-right: 5px; color: #FFFFFF; background-color: #784F33; border: 1px solid #784F33; transition: .2s; }
+.hero-block__get-quote-btn:hover { background-color: #D0A144; border-color: #D0A144; }
 
 .hero-block__learn-more-btn { color: #784F33; border: 1px solid #784F33; background-color: transparent; transition: .4s; }
 .hero-block__learn-more-btn:hover { color: #FFFFFF; background-color: #784F33; }
@@ -115,7 +115,8 @@ li { list-style: none; }
 .subscribe-block .subscribe-text { display: inline-block; margin: 0; width: 270px; font: 700 24px / 32px "Martel"; letter-spacing: 0.1px; color: #FFFFFF; }
 .subscribe-block .subscribe-input { display: flex; border: 1px solid #E6E6E6; border-radius: 5px; background-color: #F9F9F9; }
 .subscribe-block .subscribe-input__email { padding: 14px 0 14px 20px; width: 312px; font: 14px / 28px "Montserrat"; letter-spacing: 0.2px; border: none; background-color: #F9F9F9; }
-.subscribe-block .subscribe-input__button { padding: 14px 22px; font: 14px / 28px "Montserrat"; letter-spacing: 0.2px; color: #FFFFFF; border: none; background-color: #D0A144; }
+.subscribe-block .subscribe-input__button { padding: 14px 22px; font: 14px / 28px "Montserrat"; letter-spacing: 0.2px; color: #FFFFFF; border: none; border-radius: 0px 5px 5px 0px; background-color: #D0A144; }
+.subscribe-block .subscribe-input__button:hover { background-color: #D0A144; }
 
 .divider-dark { width: 100%; height: 77px; background-color: #252B42; }
 
@@ -139,3 +140,19 @@ li { list-style: none; }
 .free-consultation__subtitle { margin: 0; font: 400 14px / 20px "Open Sans"; letter-spacing: 0.2px; color: #737373; }
 .free-consultation__btn { max-width: 160px; padding: 15px 40px; margin-right: 145px; border-radius: 5px; background-color: #784F33; color: #FFFFFF; transition: .2s; }
 .free-consultation__btn:hover { background-color: #D0A144; }
+
+.footer { background: linear-gradient(270deg, #295C7A -1.04%, #0072B5 100%); }
+.footer .content { padding-top: 50px; padding-bottom: 50px; }
+.footer__list-blocks { display: flex; justify-content: space-between; }
+.footer__list-blocks__title { margin-top: 0; margin-bottom: 20px; font: 700 16px / 24px "Martel"; letter-spacing: 0.1px; color: #FFFFFF; }
+.footer__list-blocks__item { margin-right: 60px; }
+.footer__list-blocks__item__list { display: flex; flex-direction: column; justify-content: space-between; }
+.footer__list-blocks__item__list-item { margin-bottom: 10px; display: flex; }
+.footer__list-blocks__item__list-item img { margin-right: 10px; }
+.footer__list-blocks__item__list-item a { font: 600 14px / 24px "Open Sans"; letter-spacing: 0.2px; color: #FFFFFF; }
+.footer__list-blocks__item__list-item a:hover { color: #D0A144; }
+.footer__credits { padding-top: 25px; padding-bottom: 25px; background-color: #FFFFFF; }
+.footer__credits .wrapper { display: flex; justify-content: space-between; }
+.footer__credits__text { font: 700 14px / 24px "Open Sans"; letter-spacing: 0.2px; color: #737373; }
+.footer__credits .socials-list { display: flex; align-items: center; }
+.footer__credits .socials-list__item { margin-right: 20px; }
