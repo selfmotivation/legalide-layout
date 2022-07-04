@@ -63,6 +63,11 @@ li {
   width: 1048px;
   
   margin: 0 auto;
+
+  @media screen and (orientation: portrait) {
+    width: calc(100vw - 40px);
+    margin: 0 20px;
+  }
 }
 
 .title {
@@ -91,6 +96,10 @@ li {
 
     height: 104px;
   }
+
+  @media screen and (orientation: portrait) {
+    margin: 0;
+  }
 }
 
 .logo {
@@ -110,6 +119,7 @@ li {
 }
 
 .navbar__list {
+  position: relative;
   display: flex;
 
   margin-right: 16px;
@@ -122,6 +132,18 @@ li {
     color: $second-text-color;
     font: 600 14px / 24px "Open Sans";
     letter-spacing: 0.2px;
+  }
+
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+
+    background-color: #f6f6f6;
   }
 }
 
@@ -144,6 +166,10 @@ li {
 
   width: 23px;
   height: 14px;
+
+  @media screen and (orientation: portrait) {
+    margin-right: 20px;
+  }
 }
 
 .burger-line {
@@ -177,6 +203,14 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (orientation: portrait) {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    max-height: none;
   }
 }
 
@@ -188,6 +222,14 @@ li {
   line-height: 65px;
   font-weight: 900;
   letter-spacing: 0.2px;
+
+  @media screen and (orientation: portrait) {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+
+    text-align: center;
+  }
 }
 
 .hero-block__subtitle {
@@ -199,6 +241,20 @@ li {
   line-height: 30px;
   font-weight: 500;
   letter-spacing: 0.2px;
+
+  @media screen and (orientation: portrait) {
+    text-align: center;
+  }
+}
+
+.hero-block__buttons {
+  @media screen and (orientation: portrait) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+  }
 }
 
 .hero-block__get-quote-btn {
@@ -214,6 +270,11 @@ li {
     background-color: $primary-color;
     border-color: $primary-color;
   }
+
+  @media screen and (orientation: portrait) {
+    width: 182px;
+    margin-bottom: 20px;
+  }  
 }
 
 .hero-block__learn-more-btn {
@@ -227,11 +288,20 @@ li {
     color: $light-text-color;
     background-color: #784F33;
   }
+
+  @media screen and (orientation: portrait) {
+    width: 155px;
+    margin-bottom: 20px;
+  }
 }
 
 .hero__bg-photo {
   margin-right: -27px;
   max-height: 85vh;
+
+  @media screen and (orientation: portrait) {
+    max-height: 50vh;
+  }
 }
 
 // Our Practice section
