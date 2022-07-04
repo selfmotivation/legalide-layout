@@ -103,7 +103,9 @@ li {
 }
 
 .logo {
-  flex-grow: 13;
+  position: relative;
+  z-index: 2;
+  
   margin-left: 10px;
 
   color: $text-color;
@@ -115,7 +117,7 @@ li {
   display: flex;
   align-items: center;
 
-  margin-right: -6px;
+  margin-right: 20px;
 }
 
 .navbar__list {
@@ -131,17 +133,21 @@ li {
   &-item {
     margin-right: 26px;
 
-    color: $second-text-color;
-    font: 600 14px / 24px "Open Sans";
-    letter-spacing: 0.2px;
+    a {
+      color: $second-text-color;
+      font: 600 14px / 24px "Open Sans";
+      letter-spacing: 0.2px;
+
+      @media screen and (orientation: portrait) {
+        font-size: 30px;
+        font-weight: 400;
+      }
+    }
 
     @media screen and (orientation: portrait) {
       margin-right: 0;
       margin-top: 25px;
       margin-bottom: 25px;
-
-      font-size: 30px;
-      font-weight: 400;
     }
   }
 
@@ -172,6 +178,7 @@ li {
 }
 
 .search, .cart {
+  z-index: 1;
   display: block;
   height: 16px;
 
@@ -180,10 +187,27 @@ li {
   & img {
     width: 16px;
   }
+
+  @media screen and (orientation: portrait) {
+    display: none;
+    position: relative;
+    right: 30px;
+
+    margin-right: 20px;
+
+    &_shown {
+      display: block;
+    }
+
+    &_hidden {
+      display: none;
+    }
+  }
 }
 
 .burger {
-  position: relative;
+  position: fixed;
+  right: 5%;
   z-index: 1;
 
   display: flex;

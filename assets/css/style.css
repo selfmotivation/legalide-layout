@@ -23,21 +23,26 @@ li { list-style: none; }
 .header .content { display: flex; justify-content: space-between; align-items: center; height: 104px; }
 @media screen and (orientation: portrait) { .header { margin: 0; } }
 
-.logo { flex-grow: 13; margin-left: 10px; color: #252B42; font: 700 24px/32px "Martel"; letter-spacing: 0.1px; }
+.logo { position: relative; z-index: 2; margin-left: 10px; color: #252B42; font: 700 24px/32px "Martel"; letter-spacing: 0.1px; }
 
-.navbar { display: flex; align-items: center; margin-right: -6px; }
+.navbar { display: flex; align-items: center; margin-right: 20px; }
 
 .navbar__list { position: relative; display: flex; margin-right: 16px; list-style: none; transition: .3s; }
-.navbar__list-item { margin-right: 26px; color: #737373; font: 600 14px / 24px "Open Sans"; letter-spacing: 0.2px; }
-@media screen and (orientation: portrait) { .navbar__list-item { margin-right: 0; margin-top: 25px; margin-bottom: 25px; font-size: 30px; font-weight: 400; } }
+.navbar__list-item { margin-right: 26px; }
+.navbar__list-item a { color: #737373; font: 600 14px / 24px "Open Sans"; letter-spacing: 0.2px; }
+@media screen and (orientation: portrait) { .navbar__list-item a { font-size: 30px; font-weight: 400; } }
+@media screen and (orientation: portrait) { .navbar__list-item { margin-right: 0; margin-top: 25px; margin-bottom: 25px; } }
 @media screen and (orientation: portrait) { .navbar__list { flex-direction: column; justify-content: center; align-items: center; position: absolute; z-index: 1; width: 100%; height: 100%; top: 0; left: 100%; background-color: #f7f7f7; }
   .navbar__list_shown { left: 0; top: 0; }
   .navbar__list_hidden { display: none; } }
 
-.search, .cart { display: block; height: 16px; margin-right: 22px; }
+.search, .cart { z-index: 1; display: block; height: 16px; margin-right: 22px; }
 .search img, .cart img { width: 16px; }
+@media screen and (orientation: portrait) { .search, .cart { display: none; position: relative; right: 30px; margin-right: 20px; }
+  .search_shown, .cart_shown { display: block; }
+  .search_hidden, .cart_hidden { display: none; } }
 
-.burger { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; width: 23px; height: 14px; }
+.burger { position: fixed; right: 5%; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; width: 23px; height: 14px; }
 @media screen and (orientation: portrait) { .burger { margin-right: 20px; } }
 .burger_shown .burger-line, .burger_shown .burger-line:last-of-type { width: 100%; }
 
